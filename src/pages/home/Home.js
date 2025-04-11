@@ -1,16 +1,18 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import './Home.css'
+import NavBar from '../../components/NavBar';
 
 
 function Home() {
-
+const navigate = useNavigate();
 const [breathe, setBreathe] = useState(null)
 
 
 
   return (
     <div className='hero-container'>
-       
+       < NavBar />
 
         <h1
             className={`hero-text ${breathe ? 'transform-active' : ''}`}
@@ -29,6 +31,10 @@ const [breathe, setBreathe] = useState(null)
 
         <button 
             className='book-btn'
+            onClick={(e) =>{
+                e.preventDefault();
+                navigate('/book');
+            }}
             onMouseEnter={() => setBreathe(true)}
             onMouseLeave={() => setBreathe(false)}>
         Book now
