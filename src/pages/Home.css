@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-.hero-text {
+.hero-container {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -13,22 +13,18 @@
     align-items: center;
 }
 
-h1 {
+.hero-text {
     font-size: 6rem;
     font-family: MonteCarlo;
-    line-height: 6.25rem;
-    transform: scale(1);
-    transition: transform 2s ease-in-out;
+    line-height: 6.5rem;
+    transition: all 2s ease;
     cursor: pointer;
     font-weight: 500;
     z-index: 10;
 }
 
-h1:hover {
+.transform-active {
     transform: scale(1.3);
-    transition: transform 2s ease-in-out;
-   
-
 }
 
 h4 {
@@ -50,6 +46,31 @@ h4 {
     animation: fadeIn .8s ease forwards;
 }
 
+.book-btn {
+    padding: .5rem 1rem;
+    border-radius: 5rem;
+    border: none;
+    box-shadow: 0px 0px 5px grey;
+
+     /* other styles */
+     background: rgba(39, 39, 39, 0.1);
+     backdrop-filter: blur(30px);
+      /* fallback for old browsers */
+     -webkit-backdrop-filter: blur(60px);
+     border: 2px solid rgba(255, 255, 255, 0.678);
+ 
+    display: inline-flex;
+    gap: .5rem;
+    font-family: Roboto;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.book-btn:hover {
+    cursor: pointer;
+    scale: 1.1;
+}
+
 
 @keyframes fadeIn {
     from{ 
@@ -60,5 +81,49 @@ h4 {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+
+@media only screen and (max-width: 28rem) {
+    .hero-text:hover {
+        transform: scale(1);
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .fade-in {
+        display: none;
+    }
+
+    .hero-text {
+        animation: breathing 10s ease-in-out infinite normal;
+    }
+}
+
+
+
+@keyframes breathing {
+    0% {
+        transform: scale(1);
+
+    }
+
+    25% {
+        transform: scale(1.2);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    75% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
     }
 }

@@ -6,13 +6,15 @@ function Home() {
 
 const [breathe, setBreathe] = useState(null)
 
+
+
   return (
-    <div className='hero-text'>
+    <div className='hero-container'>
        
 
         <h1
-            onMouseEnter={() => setBreathe(true)}
-            onMouseLeave={() => setBreathe(false)}
+            className={`hero-text ${breathe ? 'transform-active' : ''}`}
+           
         >
             Breathe
         </h1>
@@ -25,7 +27,12 @@ const [breathe, setBreathe] = useState(null)
             <h4 className='fade-in'>out</h4>
         )}
 
-        
+        <button 
+            className='book-btn'
+            onMouseEnter={() => setBreathe(true)}
+            onMouseLeave={() => setBreathe(false)}>
+        Book now
+        </button>
     </div>
   )
 }
