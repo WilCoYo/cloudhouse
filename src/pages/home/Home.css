@@ -105,6 +105,7 @@ h4 {
     #hero-text {
         overflow: visible;
         animation: breathing 10s ease-in-out infinite normal;
+        margin-bottom: 2rem;
     }
 }
 
