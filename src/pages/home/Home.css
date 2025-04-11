@@ -14,6 +14,7 @@
 }
 
 #hero-text {
+    width: 100%;
     font-size: 6rem;
     font-family: MonteCarlo;
     line-height: 6.5rem;
@@ -81,9 +82,12 @@ h4 {
 
 
 @media only screen and (max-width: 28rem) {
-    .hero-text:hover {
+    #hero-text:hover {
         transform: scale(1);
+        overflow: visible;
     }
+
+
 
     .hidden {
         display: none;
