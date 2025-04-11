@@ -1,21 +1,19 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { PopupWidget } from 'react-calendly';
 import './Home.css'
-import NavBar from '../../components/NavBar';
 
 
 function Home() {
-const navigate = useNavigate();
 const [breathe, setBreathe] = useState(null)
-
 
 
   return (
     <div className='hero-container'>
-       < NavBar />
+       
 
         <h1
-            className={`hero-text ${breathe ? 'transform-active' : ''}`}
+            id='hero-text'
+            className={`${breathe ? 'transform-active' : ''}`}
            
         >
             Breathe
@@ -29,16 +27,19 @@ const [breathe, setBreathe] = useState(null)
             <h4 className='fade-in'>out</h4>
         )}
 
-        <button 
-            className='book-btn'
-            onClick={(e) =>{
-                e.preventDefault();
-                navigate('/book');
-            }}
-            onMouseEnter={() => setBreathe(true)}
-            onMouseLeave={() => setBreathe(false)}>
-        Book now
-        </button>
+        <div className='calendly-wrapper'
+          onMouseEnter={() => setBreathe(true)}
+          onMouseLeave={() => setBreathe(false)}>
+            <PopupWidget
+                url='https://calendly.com/wilcoyonkin'
+                rootElement={document.getElementById('root')}
+                text='Book now'
+                textColor='#fff'
+                color='#000'
+            />
+        </div>
+
+
     </div>
   )
 }

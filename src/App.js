@@ -1,7 +1,8 @@
 import { useEffect, useRef } from 'react'
-import {Routes, Route} from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import './App.css';
 import Home from '../src/pages/home/Home'
+import NavBar from './components/NavBar';
 import CLOUDS from 'vanta/src/vanta.clouds'
 import BookingPage from './pages/bookingPage/BookingPage';
 
@@ -12,9 +13,9 @@ function App() {
   useEffect(()=>{
     vantaEffect.current = CLOUDS({
       el: "#app",
-      mouseControls: false,
-      touchControls: false,
-      gyroControls: false,
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: true,
       minHeight: 200.00,
       minWidth: 200.00,
       scale: 1.00,
@@ -40,6 +41,7 @@ function App() {
 
   return (
     <div id='app'>
+      <NavBar />
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/book' element={<BookingPage/>}/>
