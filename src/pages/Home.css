@@ -21,6 +21,7 @@ h1 {
     transition: transform 2s ease-in-out;
     cursor: pointer;
     font-weight: 500;
+    z-index: 10;
 }
 
 h1:hover {
