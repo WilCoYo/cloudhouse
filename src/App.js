@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 import './App.css';
-import Home from './pages/Home'
+import Home from '../src/pages/home/Home'
 import NavBar from './components/NavBar';
 import CLOUDS from 'vanta/src/vanta.clouds'
 
@@ -21,11 +21,10 @@ function App() {
       color: 0x899651,
       backgroundColor: 0x032222,
       showDots: false,
-      // Try reducing these values to improve performance
       cloudColor: 0xadc1de,
       cloudShadowColor: 0x183550,
-      speed: 0.6, // Reduce the speed slightly
-      texturePath: null, // Use simpler texture
+      speed: 0.6, 
+      texturePath: null, 
     })
 
     
