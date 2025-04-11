@@ -11,6 +11,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 0 1rem;
 }
 
 #hero-text {
@@ -21,6 +22,11 @@
     cursor: pointer;
     font-weight: 500;
     z-index: 10;
+    /* Add these properties */
+    width: 100%;
+    text-align: center;
+    transform-origin: center center; /* Ensure scaling happens from center */
+    padding: 0 5vw; /* Responsive padding */
 }
 
 .transform-active {
