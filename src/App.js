@@ -25,7 +25,7 @@ function App() {
       showDots: false,
       cloudColor: 0xadc1de,
       cloudShadowColor: 0x183550,
-      speed: 0.6, 
+      speed: 1, 
       texturePath: null, 
     })
 
