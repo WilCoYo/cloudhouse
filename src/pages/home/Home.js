@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { PopupWidget } from 'react-calendly';
 import './Home.css'
 
 
 function Home() {
+const navigate = useNavigate();
 const [breathe, setBreathe] = useState(null)
 
 
@@ -37,7 +39,15 @@ const [breathe, setBreathe] = useState(null)
                 textColor='#fff'
                 color='#000'
             />
+            <button 
+                className='studio-btn'
+                onClick={() => {
+                    navigate('/studio');
+                  }}>
+                Our Studio
+            </button>
         </div>
+        <p>A San Fransisco-based breathwork and meditation studio</p>
 
 
     </div>

@@ -3,8 +3,9 @@ import { Route, Routes } from 'react-router-dom'
 import './App.css';
 import Home from '../src/pages/home/Home'
 import NavBar from './components/NavBar';
+import Studio from './pages/studio/Studio'
 import CLOUDS from 'vanta/src/vanta.clouds'
-import BookingPage from './pages/bookingPage/BookingPage';
+
 
 function App() {
 
@@ -44,7 +45,8 @@ function App() {
       <NavBar />
       <Routes>
         <Route path='/' element={<Home/>}/>
-        <Route path='/book' element={<BookingPage/>}/>
+        <Route path='/studio' element={<Studio />}/>
+      
       </Routes>
     </div>
   );
