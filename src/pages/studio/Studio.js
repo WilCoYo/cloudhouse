@@ -1,5 +1,4 @@
 import React from 'react'
-import studio_background from '../../images/studio-image.jpg'
 import './Studio.css'
 
 function Studio() {
