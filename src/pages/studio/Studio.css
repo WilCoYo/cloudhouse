@@ -5,11 +5,38 @@
 
 .studio-container {
     width: 100%;
-    height: auto;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: scroll;    
+    scrollbar-width: none;
+}
+
+.right-container {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.article {
+    height: 80vh;
+    text-align: center;
+    position: fixed;
+        -webkit-animation: text-focus-in 1s cubic-bezier(.550, .085, .680, .530) both;
+        animation: text-focus-in 1s cubic-bezier(.550, .085, .680, .530) both;
+}
+.article:hover {
+    cursor: pointer;
+    scale: 1.05;
+}
+
+.left-container {
+    width: 50%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-
     
 }
 
@@ -17,6 +44,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 2rem;
     margin-bottom: 2rem;
 
     -webkit-animation: text-focus-in 1s cubic-bezier(.550, .085, .680, .530) both;
@@ -44,9 +72,28 @@
 .studio-container p {
     font-family: Roboto;
     line-height: 1.5;
-    width: 40%;
+    width: 75%;
     text-align: center;
    
+}
+
+.our-classes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    -webkit-animation: text-focus-in 1.75s cubic-bezier(.550, .085, .680, .530) both;
+            animation: text-focus-in 1.75s cubic-bezier(.550, .085, .680, .530) both;
+    
+}
+
+.our-classes ul{
+    padding-top: 2rem;
+}
+
+.our-classes li {
+    list-style: none;
 }
 
 

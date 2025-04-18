@@ -8,13 +8,14 @@
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 5;
 }
 
 .navbar-text {
     width: 100%;
     display: flex;
     justify-content: center;
-    z-index: 1;
+    
 }
 
 

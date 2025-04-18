@@ -19,14 +19,12 @@
     font-family: MonteCarlo;
     line-height: 6.5rem;
     transition: all 2s ease;
-    cursor: pointer;
     font-weight: 500;
     z-index: 10;
-    /* Add these properties */
     width: 100%;
     text-align: center;
-    transform-origin: center center; /* Ensure scaling happens from center */
-    padding: 0 5vw; /* Responsive padding */
+    transform-origin: center center;
+    padding: 0 5vw; 
 }
 
 .transform-active {
