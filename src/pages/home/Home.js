@@ -47,7 +47,7 @@ const [breathe, setBreathe] = useState(null)
                 Our Studio
             </button>
         </div>
-        <p>A San Fransisco-based breathwork and meditation studio</p>
+        <p>A San Francisco-based breathwork and meditation studio</p>
 
 
     </div>

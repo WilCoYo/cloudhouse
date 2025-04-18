@@ -97,6 +97,29 @@
 }
 
 
+@media only screen and (max-width: 28rem) {
+    .studio-container {
+       flex-direction: column;
+    }
+
+    .right-container{
+        display: none;
+    }
+    .left-container{
+        width: 100%;
+    }
+
+    .studio-container p {
+        width: 95%;
+    }
+
+    .our-classes li {
+        padding-bottom: 1rem;
+    }
+
+}
+
+
 @-webkit-keyframes text-focus-in {
     0% {
         -webkit-filter: blur(12px);
